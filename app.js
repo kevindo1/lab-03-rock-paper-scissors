@@ -6,6 +6,7 @@ const winMessage = document.getElementById('win-message');
 const loseMessage = document.getElementById('lose-message');
 const drawMessage = document.getElementById('draw-message');
 const errorMessage = document.getElementById('error-message');
+const resultsBox = document.getElementById('results-box');
 
 // initialize global state
 let win = 0;
@@ -18,6 +19,8 @@ let draw = 0;
   // update DOM to reflect the new state
 
 submitButton.addEventListener('click', ()=> {
+    resultsBox.classList.remove('hidden-message');
+
     const radioSelected = document.querySelector('input[type=radio]:checked');
 
     if (!radioSelected) {

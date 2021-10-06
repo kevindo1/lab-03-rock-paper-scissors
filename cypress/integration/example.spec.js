@@ -4,9 +4,11 @@ describe('Example Test', ()=>{
         cy.visit('/');
     });
 
-    describe('HTML elements', ()=>{   
-        it('contains the alchemy logo', ()=>{
-            cy.get('.main-logo').should('be.visible');
+    describe('user-interaction', ()=>{   
+        it('should play RPS against computer', ()=>{
+            cy.get('#rock').click();
+            cy.get('submit-button').click();
+            cy.get('result-text').should('be.visible');
         });
     });
 });
