@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: sans-serif;
 };
 
 label img {
@@ -18,7 +19,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + img {
-    border: 5px blue solid;
+    border: 5px teal solid;
     filter: grayscale(0%);
 }
 
