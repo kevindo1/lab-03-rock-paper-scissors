@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { getComputerSelected, doesUserWin } from '../rps.js';
+import { doesUserWin } from '../rps.js';
 // import { example } from '../example.js';
 
 const test = QUnit.test;
@@ -13,4 +13,6 @@ test('testing doesUserWin', (expect) => {
 
     expect.equal(actual, expected, 'should be a win');
 });
+
+
 
