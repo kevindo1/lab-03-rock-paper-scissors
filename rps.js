@@ -4,13 +4,12 @@
 
 export function getComputerSelected() {
     return ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
-};
+}
 
 export function doesUserWin(userSelected, getComputerSelected) {
     if (userSelected === getComputerSelected) {
-        return 'draw'
-    }
-    if (userSelected === 'rock' && getComputerSelected === 'scissors') {
+        return 'draw';
+    } else if (userSelected === 'rock' && getComputerSelected === 'scissors') {
         return true;
     } else if (userSelected === 'scissors' && getComputerSelected === 'paper') {
         return true;
@@ -19,4 +18,4 @@ export function doesUserWin(userSelected, getComputerSelected) {
     } else {
         return false;
     }
-};
+}

@@ -7,8 +7,8 @@ describe('Example Test', ()=>{
     describe('user-interaction', ()=>{   
         it('should play RPS against computer', ()=>{
             cy.get('#rock').click();
-            cy.get('submit-button').click();
-            cy.get('result-text').should('be.visible');
+            cy.get('#submit-button').click();
+            cy.get('#win-message').should('be.visible');
         });
     });
 });

@@ -48,10 +48,12 @@ submitButton.addEventListener('click', ()=> {
 
 resetButton.addEventListener('click', ()=> {
     reset++;
-    winMessage.textContent = 0;
-    loseMessage.textContent = 0;
-    drawMessage.textContent = 0;
-
+    win = 0;
+    lose = 0;
+    draw = 0;
+    winMessage.textContent = '0';
+    loseMessage.textContent = '0';
+    drawMessage.textContent = '0';
     
     resetMessage.textContent = reset;
 });

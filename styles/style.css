@@ -8,6 +8,14 @@ label img {
     filter: grayscale(100%);
     height: 50px;
 }
+#symbols {
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=radio] {
+    display: none;
+}
 
 input[type=radio]:checked + img {
     border: 5px blue solid;
@@ -22,9 +30,9 @@ input[type=radio]:checked + img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .hidden-message {
-    display: none;
+    display: flex;
+    visibility: hidden;
 }
