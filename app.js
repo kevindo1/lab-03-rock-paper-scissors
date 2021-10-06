@@ -1,4 +1,4 @@
-import { getComputerSelected, doesUserWin } from "./rps.js";
+import { getComputerSelected, doesUserWin } from './rps.js';
 
 // import functions and grab DOM elements
 const submitButton = document.getElementById('submit-button');
@@ -7,11 +7,14 @@ const loseMessage = document.getElementById('lose-message');
 const drawMessage = document.getElementById('draw-message');
 const errorMessage = document.getElementById('error-message');
 const resultsBox = document.getElementById('results-box');
+const resetButton = document.getElementById('reset-button');
+const resetMessage = document.getElementById('reset-message');
 
 // initialize global state
 let win = 0;
 let lose = 0;
 let draw = 0;
+let reset = 0;
 
 // set event listeners 
   // get user input
@@ -24,18 +27,18 @@ submitButton.addEventListener('click', ()=> {
     const radioSelected = document.querySelector('input[type=radio]:checked');
 
     if (!radioSelected) {
-      return errorMessage.classList.remove('hidden-message');
+        return errorMessage.classList.remove('hidden-message');
     }
 
     const userSelected = radioSelected.value;
     const computerSelected = getComputerSelected();
 
     if (userSelected === computerSelected) {
-      draw++
+        draw++;
     } else if (doesUserWin(userSelected, computerSelected)) {
-      win++
+        win++;
     } else {
-      lose++
+        lose++;
     }
     
     winMessage.textContent = win;
@@ -43,3 +46,12 @@ submitButton.addEventListener('click', ()=> {
     drawMessage.textContent = draw;
 });
 
+resetButton.addEventListener('click', ()=> {
+    reset++;
+    winMessage.textContent = 0;
+    loseMessage.textContent = 0;
+    drawMessage.textContent = 0;
+
+    
+    resetMessage.textContent = reset;
+});
